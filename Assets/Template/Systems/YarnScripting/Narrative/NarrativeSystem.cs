@@ -30,7 +30,6 @@ public class NarrativeSystem : MonoBehaviour
     private void Awake()
     {
         GameEventChannel.RegisterListener<NarrativeRequestedGEM>(OnNarrativeRequested);
-        GameEventChannel.RegisterListener<GameQuitGEM>(OnGameQuit);
     }
 
     private void Start()
@@ -58,7 +57,6 @@ public class NarrativeSystem : MonoBehaviour
     private void OnDestroy()
     {
         GameEventChannel.RemoveListener<NarrativeRequestedGEM>(OnNarrativeRequested);
-        GameEventChannel.RemoveListener<GameQuitGEM>(OnGameQuit);
     }
 
 
@@ -72,12 +70,6 @@ public class NarrativeSystem : MonoBehaviour
         NarrativeRunner.YarnScriptOnCompleteAction = arg0.OnComplete;
         NarrativeRunner.StartDialogue(arg0.NodeName);
         GameEventChannel.Broadcast(new NarrativeStartedGEM());
-    }
-
-
-    private void OnGameQuit(GameQuitGEM arg0)
-    {
-        NarrativeRunner.Stop();
     }
 
     private void ShowSprite(string[] parameters)

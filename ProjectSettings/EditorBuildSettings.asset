@@ -8,5 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TitleScene/TitleScene.unity
     guid: cf0086804de8cc346960a93ae1a2bb4e
+  - enabled: 1
+    path: Assets/ExampleScene/ExampleScene.unity
+    guid: 020dbdf36c1ba49419b3e1f3805b0c41
+  - enabled: 1
+    path: Assets/Template/Systems/YarnScripting/Dialogue/DialogueScene.unity
+    guid: ff3b25cc2565c024da7691cf2a4facd2
+  - enabled: 1
+    path: Assets/Template/Systems/YarnScripting/Narrative/NarrativeScene.unity
+    guid: a7fb206e8a71f6f49b30e42f35b5f469
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f9cfeb0b67db73940b16fab6a617db63, type: 2}

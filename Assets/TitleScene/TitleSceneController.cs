@@ -61,8 +61,9 @@ public class TitleSceneController : MonoBehaviour
     {
         GameEventChannel.Broadcast(new TransitionGEM()
         {
+            TransitionInEffect = TransitionEffectEnum.Scissor,
             TransitionOutEffect = TransitionEffectEnum.Scissor,
-            NewSceneName = "ManagementScene",
+            NewSceneName = "ExampleScene",
             OnClose = new System.Action(()=>
             {
                 GameDataChannel.StartNewGame(slot);
@@ -74,6 +75,7 @@ public class TitleSceneController : MonoBehaviour
     {
         GameEventChannel.Broadcast(new TransitionGEM()
         {
+            TransitionInEffect = TransitionEffectEnum.Scissor,
             TransitionOutEffect = TransitionEffectEnum.Scissor,
             NewSceneName = "ManagementScene",
             OnClose = new System.Action(() =>

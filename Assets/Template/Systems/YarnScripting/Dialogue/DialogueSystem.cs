@@ -30,7 +30,6 @@ public class DialogueSystem : MonoBehaviour
     private void Awake()
     {
         GameEventChannel.RegisterListener<DialogueRequestedGEM>(OnDialogueRequested);
-        GameEventChannel.RegisterListener<GameQuitGEM>(OnGameQuit);
 
         if (YarnProgramsChannel.DialoguePrograms.Count > 0)
         {
@@ -54,7 +53,6 @@ public class DialogueSystem : MonoBehaviour
     private void OnDestroy()
     {
         GameEventChannel.RemoveListener<DialogueRequestedGEM>(OnDialogueRequested);
-        GameEventChannel.RemoveListener<GameQuitGEM>(OnGameQuit);
     }
 
 
@@ -82,13 +80,6 @@ public class DialogueSystem : MonoBehaviour
         GameEventChannel.Broadcast(new DialogueStartedGEM());
     }
 
-
-    private void OnGameQuit(GameQuitGEM arg0)
-    {
-        DialogueRunner.Stop();
-    }
-
-
     private void ChangeScene(string[] parameters)
     {
         GameEventChannel.Broadcast(new TransitionGEM()
@@ -112,4 +103,9 @@ public class DialogueStartedGEM : EventArgs
 public class DialogueFinishedGEM : EventArgs
 {
 
+}
+public class YarnArgs : EventArgs
+{
+    public Action OnComplete;
+    public string ErrorMessage;
 }

@@ -11,8 +11,6 @@ public class DialogueSceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SceneStartNode = GameDataChannel.GetValue("$DialogueNode").AsString;
-
         GameEventChannel.RegisterListener<DialogueStartedGEM>(OnDialogueStarted);
         GameEventChannel.RegisterListener<DialogueFinishedGEM>(OnDialogueFinished);
 

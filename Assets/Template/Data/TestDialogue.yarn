@@ -1,0 +1,14 @@
+﻿title: Test_Dialogue
+tags:
+---
+Left ValorTom::I really hate frogs.
+Right Shawn::I love frogs. But mostly just because I hate you.
+<<OptionsCaption Do you love frogs?>>
+-> Love 'em
+	Center::You love 'em!
+	Left ValorTom::That's so wrong.
+-> Hate 'em
+	Center::Down with frogs!
+	Right Shawn::That's unreasonable.
+	Right Shawn::I hate you too. Because reasons.
+===

@@ -1,0 +1,34 @@
+﻿title: Test_Narrative
+tags:
+---
+ChangingScene
+<<ChangeScene NavigationScene>>
+
+===
+
+title: Test_Narrative2
+tags:
+---
+Your father left to join the King's campaign when you were very young. He returned home from the first campaign laden with the spoils of war and a knighthood. Your parents used the money to buy a:
+
+-> Estate in the country.
+	<<set $PlayerHome to 1>>
+	<<set $PlayerHP to $PlayerHP + 10>>
+-> A house in the Capital.
+	<<set $PlayerHP to $PlayerHP - 10>>
+
+Some years later, your father again departed to join the King's campaign. Your mother engaged the service of various teachers who primarily instructed you in what art:
+-> Chivalry
+	<<set $PlayerBackground to 1>>
+-> Stewardship
+	<<set $PlayerBackground to 2>>
+-> Statecraft
+	<<set $PlayerBackground to 3>>
+-> Intrigue
+	<<set $PlayerBackground to 4>>
+	
+Argyle:: I'm your uncle, Argyle.
+
+<<ChangeScene NavigationScene>>
+
+===

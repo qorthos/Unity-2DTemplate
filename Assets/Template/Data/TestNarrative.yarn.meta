@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: f23b6a6bc4e2af34989d5ef7965a96d6
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - TestNarrative-Test_Narrative-0
+  - TestNarrative-Test_Narrative2-1
+  - TestNarrative-Test_Narrative2-2
+  - TestNarrative-Test_Narrative2-3
+  - TestNarrative-Test_Narrative2-4
+  - TestNarrative-Test_Narrative2-5
+  - TestNarrative-Test_Narrative2-6
+  - TestNarrative-Test_Narrative2-7
+  - TestNarrative-Test_Narrative2-8
+  - TestNarrative-Test_Narrative2-9
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: f23b6a6bc4e2af34989d5ef7965a96d6, type: 3}
+  localizations: []

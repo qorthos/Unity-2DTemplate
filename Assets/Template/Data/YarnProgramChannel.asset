@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74002d06b592abe4281f42d99f31924e, type: 3}
   m_Name: YarnProgramChannel
   m_EditorClassIdentifier: 
-  DialoguePrograms: []
+  DialoguePrograms:
+  - {fileID: 2480198943629176163, guid: dec118a32c2be1542b03c8903864f897, type: 3}
+  - {fileID: 2480198943629176163, guid: f23b6a6bc4e2af34989d5ef7965a96d6, type: 3}
