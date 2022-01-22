@@ -12,3 +12,16 @@ Different parts of the program can communicate with each other through the GameE
 
 Scripts can register with the GameEventChannel to recieve a callback for specific events. Any object with a limited lifecycle that registers with the GameEventChannel should remove its listeners when finished.
 
+For exmaple, to create a transition to another scene:
+
+```
+GameEventChannel.Broadcast(new TransitionGEM()
+{
+	TransitionOutEffect = TransitionEffectEnum.Scissor,
+	NewSceneName = "ExampleScene",
+	OnClose = new System.Action(()=>
+	{
+		GameDataChannel.StartNewGame(slot);
+	}),
+});
+```
