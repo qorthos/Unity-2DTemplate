@@ -10,12 +10,7 @@ public class TransitionSystem : MonoBehaviour
     public GameEventChannel GameEventChannel;
     public Animator Animator;
 
-    [ReadOnly] [SerializeField] TransitionGEM transition;
-    //public string TargetSceneName;
-    //public TransitionEffectEnum TransitionOut;
-    //public TransitionEffectEnum TransitionIn;
-    //public Action OnClose;
-    //public Action OnReopen;
+    [ReadOnly] [SerializeField] TransitionGEM cachedTransition;
 
     private void Awake()
     {
@@ -24,7 +19,7 @@ public class TransitionSystem : MonoBehaviour
 
     private void OnTransition(TransitionGEM arg0)
     {
-        transition = arg0;
+        cachedTransition = arg0;
         
 
         switch (arg0.TransitionOutEffect)
@@ -79,17 +74,17 @@ public class TransitionSystem : MonoBehaviour
 
     public void TransitionCloseComplete()
     {
-        transition.OnClose?.Invoke();
+        cachedTransition.OnClose?.Invoke();
 
-        if (transition.NewSceneName != "")
+        if (cachedTransition.NewSceneName != "")
         {
-            SceneManager.LoadScene(transition.NewSceneName);
+            SceneManager.LoadScene(cachedTransition.NewSceneName);
         }
     }
 
     public void TransitionReOpenComplete()
     {
-        transition.OnReopen?.Invoke();
+        cachedTransition.OnReopen?.Invoke();
     }
 }
 

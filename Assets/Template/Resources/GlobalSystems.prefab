@@ -779,9 +779,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameEventChannel: {fileID: 11400000, guid: 87373a910e627ee4099aa735cfaca2b5, type: 2}
   Animator: {fileID: 7245558734986960562}
-  TargetSceneName: 
-  TransitionOut: 0
-  TransitionIn: 0
 --- !u!223 &2603918151875235156
 Canvas:
   m_ObjectHideFlags: 0
@@ -872,7 +869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 264582534050036198}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GlobalSystems
   m_TagString: Startup
   m_Icon: {fileID: 0}
@@ -1480,7 +1477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6981953678321709017}
   - component: {fileID: 2312741368576732082}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AudioSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
