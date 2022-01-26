@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 
 public class TitleSceneController : MonoBehaviour
 {
@@ -10,16 +11,23 @@ public class TitleSceneController : MonoBehaviour
     public GameDataChannel GameDataChannel;
     public GameObject AllScreensContainer;
 
+    public PlayerInput PlayerInput;
 
-    void Start()
+    private void Awake()
     {
-
+        var pauseAction = PlayerInput.currentActionMap.FindAction("Pause");
+        pauseAction.performed += PauseAction_performed;
     }
 
-
-    void Update()
+    private void PauseAction_performed(InputAction.CallbackContext obj)
     {
+        GameEventChannel.Broadcast(new RequestTogglePauseGEM());
+    }
 
+    private void OnDestroy()
+    {
+        var pauseAction = PlayerInput.currentActionMap.FindAction("Pause");
+        pauseAction.performed -= PauseAction_performed;
     }
 
     public void Button_StartNewGameScreen()
